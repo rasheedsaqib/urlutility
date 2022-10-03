@@ -7,10 +7,9 @@ class UrlUtility {
   private readonly ignorePath: boolean
   private readonly ignoreQuery: boolean
   private readonly ignoreFragment: boolean
-  private readonly ignoreUsername: boolean
-  private readonly ignorePassword: boolean
+  private readonly ignoreUsernameAndPassword: boolean
   private readonly ignoreTrailingSlash: boolean
-  private readonly ignoreCase: boolean
+  private readonly toLowerCase: boolean
 
   constructor (params?: Params) {
     if (params === undefined) {
@@ -22,14 +21,13 @@ class UrlUtility {
     this.ignorePath = params.ignorePath ?? false
     this.ignoreQuery = params.ignoreQuery ?? false
     this.ignoreFragment = params.ignoreFragment ?? true
-    this.ignoreUsername = params.ignoreUsername ?? true
-    this.ignorePassword = params.ignorePassword ?? true
+    this.ignoreUsernameAndPassword = params.ignoreUsernameAndPassword ?? true
     this.ignoreTrailingSlash = params.ignoreTrailingSlash ?? false
-    this.ignoreCase = params.ignoreCase ?? false
+    this.toLowerCase = params.toLowerCase ?? false
   }
 
   public parse (url: string): string {
-    if (this.ignoreCase) {
+    if (this.toLowerCase) {
       url = url.toLowerCase()
     }
 
@@ -37,11 +35,7 @@ class UrlUtility {
       url = url.replace(/(^\w+:|^)\/\//, '')
     }
 
-    if (this.ignoreUsername) {
-      url = url.replace(/\/\/[^/]+@/, '//')
-    }
-
-    if (this.ignorePassword) {
+    if (this.ignoreUsernameAndPassword) {
       url = url.replace(/\/\/[^/]+@/, '//')
     }
 

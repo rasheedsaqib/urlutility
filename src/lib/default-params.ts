@@ -4,12 +4,11 @@ const DEFAULT_PARAMS: Params = {
   ignoreProtocol: false,
   ignorePort: true,
   ignorePath: false,
-  ignoreQuery: false,
+  ignoreQuery: true,
   ignoreFragment: true,
-  ignoreUsername: true,
-  ignorePassword: true,
+  ignoreUsernameAndPassword: true,
   ignoreTrailingSlash: false,
-  ignoreCase: false
+  toLowerCase: true
 }
 
 export default DEFAULT_PARAMS

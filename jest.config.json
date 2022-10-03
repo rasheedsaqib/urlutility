@@ -5,8 +5,7 @@
   "testEnvironment": "node",
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "<rootDir>/src/**/*.ts",
-    "!<rootDir>/src/index.ts"
+    "<rootDir>/src/**/*.ts"
   ],
   "coverageDirectory": "build/coverage",
   "coverageThreshold": {

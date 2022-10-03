@@ -4,8 +4,7 @@ export default interface Params {
   ignorePath?: boolean
   ignoreQuery?: boolean
   ignoreFragment?: boolean
-  ignoreUsername?: boolean
-  ignorePassword?: boolean
+  ignoreUsernameAndPassword?: boolean
   ignoreTrailingSlash?: boolean
-  ignoreCase?: boolean
+  toLowerCase?: boolean
 }
