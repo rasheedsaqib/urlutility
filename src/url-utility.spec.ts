@@ -1,4 +1,4 @@
-import UrlUtility from './index';
+import UrlUtility from './url-utility';
 
 describe('Tests for Url Utility', () => {
     it("should parse url with default params", () => {
