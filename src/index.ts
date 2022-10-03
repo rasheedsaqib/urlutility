@@ -67,4 +67,4 @@ class UrlUtility {
   }
 }
 
-export default UrlUtility
+export = UrlUtility
