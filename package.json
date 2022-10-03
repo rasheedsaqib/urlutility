@@ -1,0 +1,8 @@
+{
+  "name": "urlutility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rasheedsaqib/urlutility.git",
+  "author": "rasheedsaqib",
+  "license": "MIT"
+}
