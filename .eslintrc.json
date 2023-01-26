@@ -10,7 +10,8 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "sonarjs"
+    "sonarjs",
+    "vitest"
   ],
   "rules": {
     "@typescript-eslint/ban-types": "error",
