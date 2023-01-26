@@ -1,4 +1,5 @@
-import UrlUtility from './url-utility';
+import UrlUtility from './url-utility'
+import {describe, it, expect} from 'vitest'
 
 describe('Tests for Url Utility', () => {
     it("should parse url with default params", () => {
